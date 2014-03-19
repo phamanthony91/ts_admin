@@ -11,6 +11,16 @@
 |
 */
 
-Route::get('/', 'HomeController@getIndex');
+Route::get('/', function()
+{
+	return View::make('home');
+});
 
 Route::resource('users', 'UserController');
+
+
+	Route::get('learning_style', function()
+	{
+		return View::make('forms.learning_style');
+	});
+
